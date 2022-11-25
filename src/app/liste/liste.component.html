@@ -1,0 +1,33 @@
+<h2  align="center">Liste des Utilisateurs</h2>
+
+<table align="center">
+  <tr>
+    <th width="20px">Id</th>
+    <th width="120px">Nom</th>
+    <th width="120px">Prénom</th>
+    <th width="120px">Email</th>
+    <th width="120px"> </th>
+  </tr>
+  <tr *ngFor="let user of users; let pos = index" align="center">
+    <td width="20px">{{ user.id }}</td>
+    <td width="120px">{{ user.nom }}</td>
+    <td width="120px">{{ user.prenom }}</td>
+    <td width="120px">{{ user.email }}</td>
+
+    <td>
+      <img
+        src="../../assets/images/supp.jfif"
+        (click)="onSupprimer(user.id!)"
+        width="30"
+        style="cursor: pointer" title ="Supprimer"
+      />
+      |
+      <img
+        src="../../assets/images/edit.png"
+        [routerLink]="['/modifier', user.id]"
+        width="30"
+        style="cursor: pointer" title="Modifier"
+      />
+    </td>
+  </tr>
+</table>

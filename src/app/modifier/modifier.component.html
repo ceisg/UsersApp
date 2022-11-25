@@ -1,0 +1,58 @@
+<h2 align="center">Formulaire de modification</h2>
+
+<table align="center">
+  <tr>
+    <td>id :</td>
+    <td>
+      <input
+        type="text"
+        [(ngModel)]="user.id"
+        readonly
+        name="id"
+        (input)="onInput()"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td>Nom :</td>
+    <td>
+      <input
+        type="text"
+        [(ngModel)]="user.nom"
+        name="nom"
+        (input)="onInput()"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td>Prenom :</td>
+    <td>
+      <input
+        type="text"
+        [(ngModel)]="user.prenom"
+        name="pre"
+        (input)="onInput()"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td>Email :</td>
+    <td>
+      <input
+        type="text"
+        [(ngModel)]="user.email"
+        name="email"
+        (input)="onInput()"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button width="100%" [disabled]="!activate" (click)="modifier(user)">
+        Modifier
+      </button>
+    </td>
+    <td><button width="100%" (click)="cancel()">Annuler</button></td>
+  </tr>
+</table>
+

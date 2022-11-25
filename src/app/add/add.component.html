@@ -1,0 +1,12 @@
+<h2 align ="center">Formulaire d'ajout </h2>
+
+<table align="center">
+
+<tr><td>Nom : </td><td><input type="text" [(ngModel)]="user.nom" (input)="onInput()" name="n"> </td></tr>
+<tr><td>Prenom : </td><td><input type="text" [(ngModel)]="user.prenom" (input)="onInput()" name="p" ></td></tr>
+<tr><td>Email : </td><td><input type="text" [(ngModel)]="user.email" (input)="onInput()" name="e"></td></tr>
+<tr><td ><button width="100%" [disabled]="!activate" (click)="ajouter()"> Ajouter </button></td><td><button width="100%" (click)="cancel()">Annuler </button></td></tr>
+</table>
+
+
+
