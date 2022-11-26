@@ -35,7 +35,7 @@ modifier(user : User) {
 
 }
 
-cancel()
+annuler()
 {
   this.router.navigateByUrl("/liste")
 }
